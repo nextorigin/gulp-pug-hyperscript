@@ -1,5 +1,7 @@
 # gulp-pug-hyperscript
 
+[![Build Status](https://travis-ci.org/nextorigin/gulp-pug-hyperscript.svg?branch=master)](https://travis-ci.org/nextorigin/gulp-pug-hyperscript)
+
 ## About
 
 Compiles [Pug/Jade](https://github.com/pugjs/pug) templates to [Hyperscript](https://github.com/dominictarr/hyperscript).  Usable with [maquette](http://maquettejs.org/), [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [react](https://github.com/mlmorg/react-hyperscript), or any other DOM library that supports Hyperscript.
