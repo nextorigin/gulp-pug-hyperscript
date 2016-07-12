@@ -45,7 +45,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('should emit errors correctly', function(done) {
-      var filepath = '/home/contra/test/file.jade';
+      var filepath = '/home/contra/test/file.pug';
       var contents = new Buffer('section\r\nsection');
 
       pugHyperscript()
@@ -60,7 +60,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('should compile a file (pretty)', function(done) {
-      var filepath = 'test/fixtures/hello.jade';
+      var filepath = 'test/fixtures/hello.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var opts = {
         name:     "_pug_template_fn",
@@ -76,7 +76,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('should compile a file (not pretty)', function(done) {
-      var filepath = 'test/fixtures/hello.jade';
+      var filepath = 'test/fixtures/hello.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var opts = {
         name:     "_pug_template_fn",
@@ -92,7 +92,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('exports a template function', function(done) {
-      var filepath = 'test/fixtures/hello.jade';
+      var filepath = 'test/fixtures/hello.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var opts = {
         name:     "_pug_template_fn",
@@ -111,7 +111,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('uses a custom runtime', function(done) {
-      var filepath = 'test/fixtures/hello.jade';
+      var filepath = 'test/fixtures/hello.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var runtime  = "var h = require('maquette').h;"
       var opts = {
@@ -132,7 +132,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('inserts included file content', function(done) {
-      var filepath = 'test/fixtures/include.jade';
+      var filepath = 'test/fixtures/include.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var opts = {
         name:     "_pug_template_fn",
@@ -154,7 +154,7 @@ describe('gulp-pug-hyperscript', function() {
     });
 
     it('inserts extended file content', function(done) {
-      var filepath = 'test/fixtures/extends.jade';
+      var filepath = 'test/fixtures/extends.pug';
       var contents = new Buffer(fs.readFileSync(filepath));
       var opts = {
         name:     "_pug_template_fn",

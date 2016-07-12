@@ -19,9 +19,11 @@
   ],
   "dependencies": {
     "gulp-util": "^3.0.2",
-    "jade": "^1.11.0",
     "js-beautify": "^1.6.3",
     "merge": "^1.2.0",
+    "pug": "^2.0.0-beta3",
+    "pug-lexer": "^2.0.2",
+    "pug-parser": "^2.0.1",
     "through2": "^0.6.3",
     "virtual-jade": "^0.4.2"
   },

@@ -2,10 +2,16 @@ through        = require "through2"
 gutil          = require "gulp-util"
 path           = require "path"
 merge          = require "merge"
-jade           = require "jade"
+pugParser      = require "pug-parser"
+pugLexer       = require "pug-lexer"
 vjade          = require "virtual-jade"
 {PluginError}  = gutil
 
+
+class Parser extends pugParser.Parser
+  constructor: (src, filename, options) ->
+    tokens = pugLexer src, {filename}
+    super tokens, {filename, src}
 
 gulpPugHyperscript = (options) ->
   replaceExtension = (path) ->
@@ -21,7 +27,7 @@ gulpPugHyperscript = (options) ->
     defaults =
       filename: file.path
       name:     "_pug_template_fn"
-      parser:   jade.Parser
+      parser:   Parser
       pretty:   true
       silent:   true
       runtime:  vjade.runtime
