@@ -1,0 +1,41 @@
+{
+  "name": "gulp-pug-hyperscript",
+  "description": "Compile Pug/Jade files into Hyperscript",
+  "version": "1.0.0",
+  "homepage": "http://github.com/nextorigin/gulp-pug-hyperscript",
+  "repository": "git://github.com/nextorigin/gulp-pug-hyperscript.git",
+  "author": "doublerebel",
+  "main": "./gulp-pug-hyperscript.js",
+  "keywords": [
+    "gulpplugin",
+    "pug",
+    "jade",
+    "hyperscript",
+    "virtual-dom",
+    "template",
+    "gulp",
+    "plugin",
+    "transform"
+  ],
+  "dependencies": {
+    "gulp-util": "^3.0.2",
+    "jade": "^1.11.0",
+    "js-beautify": "^1.6.3",
+    "merge": "^1.2.0",
+    "through2": "^0.6.3",
+    "virtual-jade": "^0.4.2"
+  },
+  "devDependencies": {
+    "iced-coffee-script": "^108.0.11",
+    "mocha": "^2.1.0",
+    "should": "^4.6.2"
+  },
+  "scripts": {
+    "build": "iced --bare --map --runtime node -o ./ -c src/*",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 0.9.0"
+  },
+  "license": "MIT"
+}
