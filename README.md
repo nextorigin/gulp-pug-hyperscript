@@ -63,7 +63,15 @@ gulp.src('./src/views/*.pug')
 
 ## Options
 
-The options object supports the same options as [**virtual-jade**](https://github.com/tdumitrescu/virtual-jade)
+The options object supports the same options as [**virtual-jade**](https://github.com/tdumitrescu/virtual-jade), with two additional options:
+```coffee
+  silent:   true
+  runtime:  vjade.runtime
+```
+
+`silent: false` will dump the pre- and post-processed template to the console for debugging.
+
+`vjade.runtime` [defaults to](https://github.com/tdumitrescu/virtual-jade/blob/b5405858c65378828b6b27b92420dc1297a2a50e/lib/index.js#L16) `var h = require('virtual-dom/h');`.  To use Maquette or another Hyperscript library, replace `vjade.runtime` string with the appropriate string of code.
 
 ## License
 
