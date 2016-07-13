@@ -36,13 +36,15 @@ gulpPugHyperscript = function(options) {
       name: "_pug_template_fn",
       parser: jade.Parser,
       pretty: true,
-      silent: true
+      silent: true,
+      runtime: vjade.runtime
     };
     options = merge(defaults, options);
+    vjade.runtime = options.runtime;
+    if (!options.silent) {
+      console.log(str);
+    }
     try {
-      if (!options.silent) {
-        console.log(str);
-      }
       data = vjade(str, options);
       data += "\nmodule.exports = _pug_template_fn;\n";
     } catch (_error) {
