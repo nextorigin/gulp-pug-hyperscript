@@ -28,12 +28,14 @@ gulpPugHyperscript = (options) ->
     options  = merge defaults, options
     vjade.runtime = options.runtime
 
+    console.log str unless options.silent
+
     try
-      console.log str unless options.silent
       data  = vjade str, options
       data += "\nmodule.exports = _pug_template_fn;\n"
     catch err
       return cb new PluginError "gulp-pug-hyperscript", err
+
     console.log data unless options.silent
 
     file.contents = new Buffer data
