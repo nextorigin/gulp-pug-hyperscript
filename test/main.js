@@ -4,6 +4,7 @@ var gutil = require('gulp-util');
 var fs = require('fs');
 var path = require('path');
 var vjade = require('virtual-jade');
+var escapeStringRegexp = require('escape-string-regexp');
 require('mocha');
 
 
@@ -100,6 +101,27 @@ describe('gulp-pug-hyperscript', function() {
       var expectations = function(data) {
         compiled = data._contents.toString();
         compiled.should.match(/exports = _pug_template_fn/);
+        done();
+      };
+
+      pugHyperscript(opts)
+        .on('error', done)
+        .on('data', expectations)
+        .write(createFile(filepath, contents));
+    });
+
+    it('uses a custom runtime', function(done) {
+      var filepath = 'test/fixtures/hello.jade';
+      var contents = new Buffer(fs.readFileSync(filepath));
+      var runtime  = "var h = require('maquette').h;"
+      var opts = {
+        name:     "_pug_template_fn",
+        pretty:   true,
+        runtime:  "\n" + runtime + "\n"
+      };
+      var expectations = function(data) {
+        compiled = data._contents.toString();
+        compiled.should.match(new RegExp(escapeStringRegexp(runtime)));
         done();
       };
 
