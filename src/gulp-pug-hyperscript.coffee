@@ -24,7 +24,9 @@ gulpPugHyperscript = (options) ->
       parser:   jade.Parser
       pretty:   true
       silent:   true
+      runtime:  vjade.runtime
     options  = merge defaults, options
+    vjade.runtime = options.runtime
 
     try
       console.log str unless options.silent
