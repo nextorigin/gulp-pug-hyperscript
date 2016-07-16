@@ -46,7 +46,7 @@ gulpPugHyperscript = function(options) {
     }
     try {
       data = vjade(str, options);
-      data += "\nmodule.exports = _pug_template_fn;\n";
+      data += "\nmodule.exports = " + options.name + ";\n";
     } catch (_error) {
       err = _error;
       return cb(new PluginError("gulp-pug-hyperscript", err));
