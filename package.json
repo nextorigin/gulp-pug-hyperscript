@@ -23,7 +23,7 @@
     "js-beautify": "^1.6.3",
     "merge": "^1.2.0",
     "through2": "^0.6.3",
-    "virtual-jade": "^0.4.2"
+    "virtual-jade": "^0.4.3"
   },
   "devDependencies": {
     "escape-string-regexp": "^1.0.5",
