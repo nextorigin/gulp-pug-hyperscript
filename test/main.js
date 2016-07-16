@@ -50,7 +50,7 @@ describe('gulp-pug-hyperscript', function() {
 
       pugHyperscript()
         .on('error', function(err) {
-          err.message.should.equal('You can only have one top-level tag!');
+          err.message.should.match(/You can only have one top-level tag!/);
           done();
         })
         .on('data', function(newFile) {
