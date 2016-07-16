@@ -1,7 +1,7 @@
 {
   "name": "gulp-pug-hyperscript",
   "description": "Compile Pug/Jade files into Hyperscript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "http://github.com/nextorigin/gulp-pug-hyperscript",
   "repository": "git://github.com/nextorigin/gulp-pug-hyperscript.git",
   "author": "doublerebel",
