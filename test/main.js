@@ -131,6 +131,27 @@ describe('gulp-pug-hyperscript', function() {
         .write(createFile(filepath, contents));
     });
 
+    it('uses a custom template function name', function(done) {
+      var filepath = 'test/fixtures/hello.jade';
+      var contents = new Buffer(fs.readFileSync(filepath));
+      var runtime  = "var h = require('maquette').h;"
+      var opts = {
+        name:     "_custom_template_fn",
+        pretty:   true
+      };
+      var expectations = function(data) {
+        compiled = data._contents.toString();
+        matches = compiled.match(new RegExp(opts.name, "g"));
+        matches.length.should.equal(2);
+        done();
+      };
+
+      pugHyperscript(opts)
+        .on('error', done)
+        .on('data', expectations)
+        .write(createFile(filepath, contents));
+    });
+
     it('inserts included file content', function(done) {
       var filepath = 'test/fixtures/include.jade';
       var contents = new Buffer(fs.readFileSync(filepath));
