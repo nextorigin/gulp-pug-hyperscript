@@ -99,7 +99,7 @@ describe('gulp-pug-hyperscript', function() {
         pretty:   true
       };
       var expectations = function(data) {
-        compiled = data._contents.toString();
+        var compiled = data._contents.toString();
         compiled.should.match(/exports = _pug_template_fn/);
         done();
       };
@@ -120,7 +120,7 @@ describe('gulp-pug-hyperscript', function() {
         runtime:  "\n" + runtime + "\n"
       };
       var expectations = function(data) {
-        compiled = data._contents.toString();
+        var compiled = data._contents.toString();
         compiled.should.match(new RegExp(escapeStringRegexp(runtime)));
         done();
       };
@@ -140,8 +140,8 @@ describe('gulp-pug-hyperscript', function() {
         pretty:   true
       };
       var expectations = function(data) {
-        compiled = data._contents.toString();
-        matches = compiled.match(new RegExp(opts.name, "g"));
+        var compiled = data._contents.toString();
+        var matches = compiled.match(new RegExp(opts.name, "g"));
         matches.length.should.equal(2);
         done();
       };
@@ -160,7 +160,7 @@ describe('gulp-pug-hyperscript', function() {
         pretty:   true
       };
       var expectations = function(data) {
-        compiled = data._contents.toString();
+        var compiled = data._contents.toString();
         compiled.should.match(/h\("div", {/);
         compiled.should.match(/Hello/);
         compiled.should.match(/llamas!!!/);
@@ -182,7 +182,7 @@ describe('gulp-pug-hyperscript', function() {
         pretty:   true
       };
       var expectations = function(data) {
-        compiled = data._contents.toString();
+        var compiled = data._contents.toString();
         compiled.should.match(/h\("div", {/);
         compiled.should.match(/capybara/);
         compiled.should.not.match(/overridden animal/);
