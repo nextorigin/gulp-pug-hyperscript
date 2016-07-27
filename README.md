@@ -1,10 +1,19 @@
 # gulp-pug-hyperscript
 
-[![Build Status](https://travis-ci.org/nextorigin/gulp-pug-hyperscript.svg?branch=master)](https://travis-ci.org/nextorigin/gulp-pug-hyperscript)
+[![Build Status][ci-master]][travis-ci]
+[![Coverage Status][coverage-master]][coveralls]
+[![Dependency Status][dependency]][david]
+[![devDependency Status][dev-dependency]][david]
+[![Downloads][downloads]][npm]
+
+Compiles [Pug/Jade](https://github.com/pugjs/pug) templates to [Hyperscript](https://github.com/dominictarr/hyperscript).
+
+[![NPM](https://nodei.co/npm/gulp-pug-hyperscript.png?downloads=true&downloadRank=true&stars=true)](https://npmjs.org/package/gulp-pug-hyperscript)
+
 
 ## About
 
-Compiles [Pug/Jade](https://github.com/pugjs/pug) templates to [Hyperscript](https://github.com/dominictarr/hyperscript).  Usable with [maquette](http://maquettejs.org/), [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [react](https://github.com/mlmorg/react-hyperscript), or any other DOM library that supports Hyperscript.
+**gulp-pug-hyperscript** is a gulp plugin to compile [Pug/Jade](https://github.com/pugjs/pug) templates to [Hyperscript](https://github.com/dominictarr/hyperscript).  Usable with [maquette](http://maquettejs.org/), [virtual-dom](https://github.com/Matt-Esch/virtual-dom), [react](https://github.com/mlmorg/react-hyperscript), or any other DOM library that supports Hyperscript.
 
 This package was created by smashing [**gulp-iced-coffee**](https://github.com/doublerebel/gulp-iced-coffee) and [**virtual-jade-loader**](https://github.com/tdumitrescu/virtual-jade-loader) together until they fit.  It uses [**virtual-jade**](https://github.com/tdumitrescu/virtual-jade) to compile from Pug/Jade to Hyperscript.
 
@@ -76,3 +85,14 @@ The options object supports the same options as [**virtual-jade**](https://githu
 ## License
 
 MIT
+
+  [ci-master]: https://img.shields.io/travis/nextorigin/gulp-pug-hyperscript/master.svg?style=flat-square
+  [travis-ci]: https://travis-ci.org/nextorigin/gulp-pug-hyperscript
+  [coverage-master]: https://img.shields.io/coveralls/nextorigin/gulp-pug-hyperscript/master.svg?style=flat-square
+  [coveralls]: https://coveralls.io/r/nextorigin/gulp-pug-hyperscript
+  [dependency]: https://img.shields.io/david/nextorigin/gulp-pug-hyperscript.svg?style=flat-square
+  [david]: https://david-dm.org/nextorigin/gulp-pug-hyperscript
+  [dev-dependency]: https://img.shields.io/david/dev/nextorigin/gulp-pug-hyperscript.svg?style=flat-square
+  [david-dev]: https://david-dm.org/nextorigin/gulp-pug-hyperscript#info=devDependencies
+  [downloads]: https://img.shields.io/npm/dm/gulp-pug-hyperscript.svg?style=flat-square
+  [npm]: https://www.npmjs.org/package/gulp-pug-hyperscript
