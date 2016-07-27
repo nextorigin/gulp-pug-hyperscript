@@ -22,7 +22,7 @@
     "jade": "^1.11.0",
     "js-beautify": "^1.6.3",
     "merge": "^1.2.0",
-    "through2": "^0.6.3",
+    "through2": "^2.0.1",
     "virtual-jade": "^0.4.3"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "iced-coffee-script": "^108.0.11",
     "istanbul": "^0.4.4",
     "mocha": "^2.1.0",
-    "should": "^4.6.2"
+    "should": "^10.0.0"
   },
   "scripts": {
     "test": "npm run test:modules && npm run test:report",
