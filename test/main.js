@@ -1,4 +1,4 @@
-var pugHyperscript = require('../');
+var pugHyperscript = require('../src/gulp-pug-hyperscript');
 var should = require('should');
 var gutil = require('gulp-util');
 var fs = require('fs');

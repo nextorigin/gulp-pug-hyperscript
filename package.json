@@ -26,14 +26,20 @@
     "virtual-jade": "^0.4.3"
   },
   "devDependencies": {
+    "coveralls": "^2.11.11",
     "escape-string-regexp": "^1.0.5",
+    "iced-coffee-coverage": "^1.0.2",
     "iced-coffee-script": "^108.0.11",
+    "istanbul": "^0.4.4",
     "mocha": "^2.1.0",
     "should": "^4.6.2"
   },
   "scripts": {
-    "build": "iced --bare --map --runtime node -o ./ -c src/*",
-    "test": "mocha"
+    "test": "npm run test:modules && npm run test:report",
+    "test:modules": "mocha --recursive --compilers coffee:iced-coffee-script/register --require iced-coffee-coverage/register-istanbul test/",
+    "test:report": "istanbul report",
+    "test:coverage": "istanbul report text-summary lcov",
+    "build": "iced --bare --map -o ./ -c src/*"
   },
   "engines": {
     "node": ">= 0.9.0"
