@@ -25,6 +25,7 @@ gulpPugHyperscript = (options) ->
       pretty:   true
       silent:   true
       runtime:  vjade.runtime
+      class:    false
     options  = merge defaults, options
     vjade.runtime = options.runtime
 
@@ -38,6 +39,7 @@ gulpPugHyperscript = (options) ->
 
     console.log data unless options.silent
 
+    data = data.replace /"className":/g, '"class":' if options.class
     file.contents = new Buffer data
     file.path     = dest
     cb null, file
