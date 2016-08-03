@@ -77,6 +77,7 @@ The options object supports the same options as [**virtual-jade**](https://githu
   silent:   true
   runtime:  vjade.runtime
   class:    false
+  marshallDataset: true
 ```
 
 `silent: false` will dump the pre- and post-processed template to the console for debugging.
@@ -84,6 +85,9 @@ The options object supports the same options as [**virtual-jade**](https://githu
 `vjade.runtime` [defaults to](https://github.com/tdumitrescu/virtual-jade/blob/b5405858c65378828b6b27b92420dc1297a2a50e/lib/index.js#L16) `var h = require('virtual-dom/h');`.  To use Maquette or another Hyperscript library, replace `vjade.runtime` string with the appropriate string of code.
 
 `class` replaces `className` attribute with the regular `class` attribute.  This is necessary for Maquette and some other renderers.
+
+`marshallDataset`, when false, will prevent virtual-jade from turning `data-
+*` attributes into a `dataset` Object.  This is necessary for Maquette and some other renderers.
 
 ## License
 

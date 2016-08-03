@@ -26,6 +26,7 @@ gulpPugHyperscript = (options) ->
       silent:   true
       runtime:  vjade.runtime
       class:    false
+      marshalDataset: true
     options  = merge defaults, options
     vjade.runtime = options.runtime
 
