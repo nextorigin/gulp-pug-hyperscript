@@ -20,19 +20,19 @@
   "dependencies": {
     "gulp-util": "^3.0.2",
     "jade": "^1.11.0",
-    "js-beautify": "^1.6.3",
+    "js-beautify": "^1.6.4",
     "merge": "^1.2.0",
     "through2": "^2.0.1",
-    "virtual-jade": "^0.4.3"
+    "virtual-jade": "^0.5.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.11",
+    "coveralls": "^2.11.14",
     "escape-string-regexp": "^1.0.5",
     "iced-coffee-coverage": "^1.0.3",
     "iced-coffee-script": "^108.0.11",
-    "istanbul": "^0.4.4",
-    "mocha": "^2.1.0",
-    "should": "^10.0.0"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "should": "^11.1.1"
   },
   "scripts": {
     "test": "npm run test:modules && npm run test:report",
