@@ -26,7 +26,7 @@
     "virtual-jade": "^0.4.3"
   },
   "devDependencies": {
-    "coveralls": "^2.11.11",
+    "coveralls": "^2.11.13",
     "escape-string-regexp": "^1.0.5",
     "iced-coffee-coverage": "^1.0.3",
     "iced-coffee-script": "^108.0.11",
