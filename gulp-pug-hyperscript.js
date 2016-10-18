@@ -37,7 +37,9 @@ gulpPugHyperscript = function(options) {
       parser: jade.Parser,
       pretty: true,
       silent: true,
-      runtime: vjade.runtime
+      runtime: vjade.runtime,
+      "class": false,
+      marshalDataset: true
     };
     options = merge(defaults, options);
     vjade.runtime = options.runtime;
@@ -53,6 +55,9 @@ gulpPugHyperscript = function(options) {
     }
     if (!options.silent) {
       console.log(data);
+    }
+    if (options["class"]) {
+      data = data.replace(/"className":/g, '"class":');
     }
     file.contents = new Buffer(data);
     file.path = dest;
