@@ -22,7 +22,7 @@
     "jade": "^1.11.0",
     "js-beautify": "^1.6.4",
     "merge": "^1.2.0",
-    "through2": "^2.0.1",
+    "through2": "^2.0.3",
     "virtual-jade": "^0.5.1"
   },
   "devDependencies": {
