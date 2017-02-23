@@ -23,7 +23,7 @@
     "js-beautify": "^1.6.4",
     "merge": "^1.2.0",
     "through2": "^2.0.3",
-    "virtual-jade": "^0.7.1"
+    "virtual-jade": "^0.8.2"
   },
   "devDependencies": {
     "coveralls": "^2.11.15",
