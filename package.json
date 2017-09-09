@@ -23,7 +23,7 @@
     "js-beautify": "^1.6.4",
     "merge": "^1.2.0",
     "through2": "^2.0.3",
-    "virtual-jade": "^0.7.1"
+    "virtual-jade": "^0.9.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.15",
@@ -32,7 +32,7 @@
     "iced-coffee-script": "^108.0.11",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "should": "^11.1.2"
+    "should": "^13.0.1"
   },
   "scripts": {
     "test": "npm run test:modules && npm run test:report",
